@@ -1,8 +1,16 @@
-# React + Vite
+![Logo](https://i.ibb.co/B3gN1Lh/Screenshot-2023-08-10-101630.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# My City Weather
 
-Currently, two official plugins are available:
+check the weather in your city ⛅
+[mycityweather.vercel.app](https://mycityweather.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+
+- React.js
+- React router 6
+- Tailwind CSS
+
+## Copyright
+
+No copyright issues. Feel free to copy anything and everything from this website. If you need any help, ping me !
