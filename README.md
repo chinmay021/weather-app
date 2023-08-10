@@ -11,7 +11,7 @@ check the weather in your city ⛅
 - React router 6
 - Tailwind CSS
 
-## how to run locally
+## How to run locally
 
 ![run locally](https://i.ibb.co/n6g9dN1/carbon.png)
 
@@ -20,7 +20,7 @@ check the weather in your city ⛅
 - npm install
 - npm run dev
 
-## lighthouse report
+## Lighthouse Report
 
 ![lighthouse-report](https://i.ibb.co/PhkqmPB/lighthouse-report.png)
 
