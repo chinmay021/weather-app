@@ -26,7 +26,7 @@ const WeatherInfo = () => {
       imgSrc = cloud;
     }
   }
-  return (
+  return weatherData ? (
     <div className="w-screen h-screen flex justify-center items-center bg-blue-400">
       <div className="card bg-white rounded-md w-96 ">
         <h1 className="text-blue-400 border-b border-black/20 p-4 font-semibold text-xl flex gap-4 items-center">
@@ -134,6 +134,30 @@ const WeatherInfo = () => {
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  ) : (
+    <div className="w-screen h-screen flex justify-center items-center bg-blue-400">
+      <div className="card bg-white rounded-md w-96 h-96 flex justify-center items-center">
+        <Link to='/' className="w-full mx-10">
+          <button className="rounded-md hover:bg-blue-600 duration-300 bg-blue-500 py-2 pl-20   text-white font-semibold w-full  text-lg flex  items-center gap-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-6 cursor-pointer "
+              viewBox="0 0 1024 1024"
+            >
+              <path
+                fill="currentColor"
+                d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z"
+              />
+              <path
+                fill="currentColor"
+                d="m237.248 512l265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z"
+              />
+            </svg>
+            <span>select city</span>
+          </button>
+        </Link>
       </div>
     </div>
   );

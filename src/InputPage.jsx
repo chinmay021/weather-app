@@ -149,7 +149,7 @@ const InputPage = () => {
           Getting weather details...
         </div>
         <button
-          className="rounded-md hover:bg-blue-600 duration-300 bg-blue-400 p-2 mx-4  mb-6 mt-2 text-white font-semibold  "
+          className="rounded-md hover:bg-blue-600 duration-300 bg-blue-500 p-2 mx-4  mb-6 mt-2 text-white font-semibold  "
           onClick={getLocation}
         >
           Get Device Location
