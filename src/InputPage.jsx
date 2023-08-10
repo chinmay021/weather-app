@@ -32,7 +32,7 @@ const InputPage = () => {
   };
 
   const showPosition = (position) => {
-    console.log("called");
+    // console.log("called");
     setLocation({
       lat: position.coords.latitude,
       long: position.coords.longitude,
@@ -50,7 +50,7 @@ const InputPage = () => {
 
   const getWeather = async (url) => {
     const res = await fetch(url);
-    console.log(res);
+    // console.log(res);
     if (res.status !== 200) {
       setLoading(false);
       const data = await res.json();
@@ -61,11 +61,11 @@ const InputPage = () => {
     const data = await res.json();
     setWeatherData(data);
     setLoading(false);
-    console.log(data);
+    // console.log(data);
   };
 
   const handleSubmit = () => {
-    console.log("sumbit");
+    // console.log("sumbit");
     setLoading(true);
     const URL_CITY = `${API_WEATHER_URL}q=${searchTerm}&appid=${
       import.meta.env.VITE_API_KEY
@@ -95,12 +95,12 @@ const InputPage = () => {
     //   (item) => `${item.name}, ${item.state}, ${item.country}`
     // );
     setSuggestions(data);
-    console.log(data, text);
+    // console.log(data, text);
   };
 
   const handleSuggestion = (suggestion) => {
     // setSearchTerm(suggestion);
-    console.log(suggestion, suggestion.lat, suggestion.lon);
+    // console.log(suggestion, suggestion.lat, suggestion.lon);
     setLocation({
       lat: suggestion.lat,
       long: suggestion.lon,
@@ -118,7 +118,7 @@ const InputPage = () => {
     }&appid=${import.meta.env.VITE_API_KEY}`;
 
     if (location.lat !== undefined && location.long !== undefined) {
-      console.log("here");
+      // console.log("here");
       getWeather(URL_LOCATION);
     }
   }, [location]);

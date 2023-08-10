@@ -8,7 +8,7 @@ import thunderstorm from "./assets/Weather Icons/storm.svg";
 
 const WeatherInfo = () => {
   const { state: weatherData } = useLocation();
-  console.log(weatherData);
+  // console.log(weatherData);
   let imgSrc = "";
   if (weatherData) {
     const id = weatherData.weather[0].id;
