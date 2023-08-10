@@ -18,6 +18,8 @@ check the weather in your city ⛅
 - git clone https://github.com/chinmay021/weather-app.git
 - cd weather-app
 - npm install
+- create a .env file in the root folder and add your api key VITE_API_KEY={YOUR_API_KEY}
+  ![env file](https://i.ibb.co/z5n5C3C/env.png)
 - npm run dev
 
 ## Lighthouse Report
