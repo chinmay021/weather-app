@@ -11,6 +11,15 @@ check the weather in your city ⛅
 - React router 6
 - Tailwind CSS
 
+## how to run locally
+
+![run locally](https://i.ibb.co/n6g9dN1/carbon.png)
+
+- git clone https://github.com/chinmay021/weather-app.git
+- cd weather-app
+- npm install
+- npm run dev
+
 ## Copyright
 
 No copyright issues. Feel free to copy anything and everything from this website. If you need any help, ping me !
