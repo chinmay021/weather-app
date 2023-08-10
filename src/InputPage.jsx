@@ -128,7 +128,7 @@ const InputPage = () => {
   }, [debounceSearchTerm]);
 
   return (
-    <div className="w-screen h-screen flex justify-center items-center bg-blue-500 ">
+    <div className="w-screen h-screen flex justify-center items-center bg-blue-400 ">
       <div className="input-card relative w-80 bg-white  rounded-md  flex flex-col">
         <h1 className="text-blue-500 text-xl font-bold border-b-2 p-4">
           Weather App
