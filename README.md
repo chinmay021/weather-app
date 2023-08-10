@@ -20,6 +20,10 @@ check the weather in your city ⛅
 - npm install
 - npm run dev
 
+## lighthouse report
+
+![lighthouse-report](https://i.ibb.co/PhkqmPB/lighthouse-report.png)
+
 ## Copyright
 
 No copyright issues. Feel free to copy anything and everything from this website. If you need any help, ping me !
