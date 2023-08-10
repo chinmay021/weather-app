@@ -27,9 +27,9 @@ const WeatherInfo = () => {
     }
   }
   return weatherData ? (
-    <div className="w-screen h-screen flex justify-center items-center bg-blue-400">
+    <div className="w-screen h-screen flex justify-center items-center bg-blue-500">
       <div className="card bg-white rounded-md w-96 ">
-        <h1 className="text-blue-400 border-b border-black/20 p-4 font-semibold text-xl flex gap-4 items-center">
+        <h1 className="text-blue-500 border-b border-black/20 p-4 font-semibold text-xl flex gap-4 items-center">
           <Link to="/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -137,10 +137,10 @@ const WeatherInfo = () => {
       </div>
     </div>
   ) : (
-    <div className="w-screen h-screen flex justify-center items-center bg-blue-400">
+    <div className="w-screen h-screen flex justify-center items-center bg-blue-500">
       <div className="card bg-white rounded-md w-96 h-96 flex justify-center items-center">
         <Link to='/' className="w-full mx-10">
-          <button className="rounded-md hover:bg-blue-600 duration-300 bg-blue-500 py-2 pl-20   text-white font-semibold w-full  text-lg flex  items-center gap-4">
+          <button className="rounded-md hover:bg-blue-700 duration-300 bg-blue-600 py-2 pl-20   text-white font-semibold w-full  text-lg flex  items-center gap-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-6 cursor-pointer "

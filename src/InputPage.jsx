@@ -128,9 +128,9 @@ const InputPage = () => {
   }, [debounceSearchTerm]);
 
   return (
-    <div className="w-screen h-screen flex justify-center items-center bg-blue-400 ">
+    <div className="w-screen h-screen flex justify-center items-center bg-blue-500 ">
       <div className="input-card relative w-80 bg-white  rounded-md  flex flex-col">
-        <h1 className="text-blue-400 text-xl font-bold border-b-2 p-4">
+        <h1 className="text-blue-500 text-xl font-bold border-b-2 p-4">
           Weather App
         </h1>
 
@@ -149,7 +149,7 @@ const InputPage = () => {
           Getting weather details...
         </div>
         <button
-          className="rounded-md hover:bg-blue-600 duration-300 bg-blue-500 p-2 mx-4  mb-6 mt-2 text-white font-semibold  "
+          className="rounded-md hover:bg-blue-700 duration-300 bg-blue-600 p-2 mx-4  mb-6 mt-2 text-white font-semibold  "
           onClick={getLocation}
         >
           Get Device Location
@@ -160,7 +160,7 @@ const InputPage = () => {
             <span className="w-full border-t border" />
           </div>
           <div className="relative flex justify-center ">
-            <span className="bg-white px-4 font-semibold text-gray-400">
+            <span className="bg-white px-4 font-semibold text-gray-800">
               or
             </span>
           </div>
@@ -172,6 +172,7 @@ const InputPage = () => {
           value={searchTerm}
           onChange={(e) => handleInputChange(e)}
           onKeyDown={handleKeyDown}
+          aria-label="input for city"
         />
         {suggestions.length > 0 && (
           <ul className="dropdown absolute bottom-0  w-full  h-fit bg-white top-[97%] rounded ">
