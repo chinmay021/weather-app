@@ -129,7 +129,7 @@ const InputPage = () => {
 
   return (
     <div className="w-screen h-screen flex justify-center items-center bg-blue-400 ">
-      <div className="input-card relative w-80 bg-white  rounded-md  flex flex-col">
+      <div className="input-card relative w-96 bg-white  rounded-md  flex flex-col">
         <h1 className="text-blue-500 text-xl font-bold border-b-2 p-4">
           Weather App
         </h1>
@@ -149,7 +149,7 @@ const InputPage = () => {
           Getting weather details...
         </div>
         <button
-          className="rounded-md hover:bg-blue-700 duration-300 bg-blue-600 p-2 mx-4  mb-6 mt-2 text-white font-semibold  "
+          className="rounded-md hover:bg-blue-700 duration-300 bg-blue-600 p-2 mx-4  mb-4 mt-2 text-white font-semibold  "
           onClick={getLocation}
         >
           Get Device Location
