@@ -55,10 +55,10 @@ const WeatherInfo = () => {
           <span className="temp font-bold text-6xl tracking-wider">
             {Math.floor(weatherData?.main?.temp)}&deg;C
           </span>
-          <span className="details mt-4  text-xl  tracking-wide">
+          <span className="details mt-4  text-xl  tracking-wide font-semibold">
             {weatherData?.weather?.[0]?.description}
           </span>
-          <span className="location flex  items-center mt-4 gap-2 text-xl tracking-wide">
+          <span className="location flex  items-center mt-4 gap-2 text-xl tracking-wide font-semibold">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-5 h-5"
