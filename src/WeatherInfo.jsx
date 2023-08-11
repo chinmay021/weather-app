@@ -5,6 +5,7 @@ import haze from "./assets/Weather Icons/haze.svg";
 import rain from "./assets/Weather Icons/rain.svg";
 import snow from "./assets/Weather Icons/snow.svg";
 import thunderstorm from "./assets/Weather Icons/storm.svg";
+import { countryCodeToName } from "./utils/helper";
 
 const WeatherInfo = () => {
   const { state: weatherData } = useLocation();
@@ -26,6 +27,7 @@ const WeatherInfo = () => {
       imgSrc = cloud;
     }
   }
+
   return weatherData ? (
     <div className="w-screen h-screen flex justify-center items-center bg-blue-400 overflow-auto">
       <div className="card bg-white rounded-md w-96 ">
@@ -73,7 +75,9 @@ const WeatherInfo = () => {
                 <path d="M24 15c-3 7-8 15-8 15s-5-8-8-15s2-13 8-13s11 6 8 13Z" />
               </g>
             </svg>
-            <p>{`${weatherData?.name}, ${weatherData?.sys?.country}`}</p>
+            <p>{`${weatherData?.name}, ${countryCodeToName(
+              weatherData?.sys?.country
+            )}`}</p>
           </span>
         </div>
         <div className="extra-details flex border-t border-black/30 mt-6 justify-between">
@@ -118,7 +122,7 @@ const WeatherInfo = () => {
   ) : (
     <div className="w-screen h-screen flex justify-center items-center bg-blue-400">
       <div className="card bg-white rounded-md w-96 h-96 flex justify-center items-center">
-        <Link to='/' className="w-full mx-10">
+        <Link to="/" className="w-full mx-10">
           <button className="rounded-md hover:bg-blue-700 duration-300 bg-blue-600 py-2 pl-20   text-white font-semibold w-full  text-lg flex  items-center gap-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
