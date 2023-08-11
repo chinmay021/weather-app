@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { API_SUGGESTIONS_URL, API_WEATHER_URL } from "../constants";
-import useDebounce from "./hooks/useDebounce";
+import {  API_WEATHER_URL } from "../constants";
+// import useDebounce from "./hooks/useDebounce";
 import { useNavigate } from "react-router-dom";
 
 const InputPage = () => {
@@ -13,11 +13,11 @@ const InputPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [suggestions, setSuggestions] = useState([]);
+  // const [suggestions, setSuggestions] = useState([]);
 
   const navigate = useNavigate();
-  const delay = 200;
-  const debounceSearchTerm = useDebounce(searchTerm, delay);
+  // const delay = 200;
+  // const debounceSearchTerm = useDebounce(searchTerm, delay);
 
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
@@ -80,32 +80,32 @@ const InputPage = () => {
     setError(false);
   };
 
-  const getSuggestions = async (text) => {
-    if (text.trim() === "") {
-      setSuggestions([]);
-      return;
-    }
-    const res = await fetch(
-      `${API_SUGGESTIONS_URL}q=${text}&appid=${
-        import.meta.env.VITE_API_KEY
-      }&limit=5`
-    );
-    const data = await res.json();
-    // let arr = data.map(
-    //   (item) => `${item.name}, ${item.state}, ${item.country}`
-    // );
-    setSuggestions(data);
-    // console.log(data, text);
-  };
+  // const getSuggestions = async (text) => {
+  //   if (text.trim() === "") {
+  //     setSuggestions([]);
+  //     return;
+  //   }
+  //   const res = await fetch(
+  //     `${API_SUGGESTIONS_URL}q=${text}&appid=${
+  //       import.meta.env.VITE_API_KEY
+  //     }&limit=5`
+  //   );
+  //   const data = await res.json();
+  //   // let arr = data.map(
+  //   //   (item) => `${item.name}, ${item.state}, ${item.country}`
+  //   // );
+  //   setSuggestions(data);
+  //   // console.log(data, text);
+  // };
 
-  const handleSuggestion = (suggestion) => {
-    // setSearchTerm(suggestion);
-    // console.log(suggestion, suggestion.lat, suggestion.lon);
-    setLocation({
-      lat: suggestion.lat,
-      long: suggestion.lon,
-    });
-  };
+  // const handleSuggestion = (suggestion) => {
+  //   // setSearchTerm(suggestion);
+  //   // console.log(suggestion, suggestion.lat, suggestion.lon);
+  //   setLocation({
+  //     lat: suggestion.lat,
+  //     long: suggestion.lon,
+  //   });
+  // };
 
   useEffect(() => {
     if (weatherData === null) return;
@@ -123,14 +123,14 @@ const InputPage = () => {
     }
   }, [location]);
 
-  useEffect(() => {
-    getSuggestions(debounceSearchTerm);
-  }, [debounceSearchTerm]);
+  // useEffect(() => {
+  //   getSuggestions(debounceSearchTerm);
+  // }, [debounceSearchTerm]);
 
   return (
     <div className="w-screen h-screen flex justify-center items-center bg-blue-400 ">
       <div className="input-card relative w-96 bg-white  rounded-md  flex flex-col">
-        <h1 className="text-blue-500 text-xl font-bold border-b-2 p-4">
+        <h1 className="text-blue-400 text-xl font-bold border-b-2 p-4">
           Weather App
         </h1>
 
@@ -148,23 +148,6 @@ const InputPage = () => {
         >
           Getting weather details...
         </div>
-        <button
-          className="rounded-md hover:bg-blue-700 duration-300 bg-blue-600 p-2 mx-4  mb-4 mt-2 text-white font-semibold  "
-          onClick={getLocation}
-        >
-          Get Device Location
-        </button>
-
-        <div className="relative mx-4">
-          <div className="absolute inset-0 flex items-center">
-            <span className="w-full border-t border" />
-          </div>
-          <div className="relative flex justify-center ">
-            <span className="bg-white px-4 font-semibold text-gray-800">
-              or
-            </span>
-          </div>
-        </div>
         <input
           className="input   box-border focus:outline-none p-2 border-2 text-center mx-4  mt-4 mb-2 rounded-md placeholder-gray-400 focus:border-blue-400"
           type="text"
@@ -174,7 +157,25 @@ const InputPage = () => {
           onKeyDown={handleKeyDown}
           aria-label="input for city"
         />
-        {suggestions.length > 0 && (
+
+        <div className="relative mx-4">
+          <div className="absolute inset-0 flex items-center">
+            <span className="w-full border-t border" />
+          </div>
+          <div className="relative flex justify-center ">
+            <span className="bg-white px-4 font-semibold text-gray-400">
+              or
+            </span>
+          </div>
+        </div>
+        <button
+          className="rounded-md hover:bg-blue-500 duration-300 bg-blue-400 p-2 mx-4  mb-6 mt-2 text-white font-semibold text-lg  "
+          onClick={getLocation}
+        >
+          Get Device Location
+        </button>
+
+        {/* {suggestions.length > 0 && (
           <ul className="dropdown absolute bottom-0  w-full  h-fit bg-white top-[97%] rounded ">
             {suggestions.map((suggestion, index) => (
               <li
@@ -202,7 +203,7 @@ const InputPage = () => {
               </li>
             ))}
           </ul>
-        )}
+        )} */}
       </div>
     </div>
   );
