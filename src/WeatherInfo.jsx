@@ -27,7 +27,7 @@ const WeatherInfo = () => {
     }
   }
   return weatherData ? (
-    <div className="w-screen h-screen flex justify-center items-center bg-blue-400">
+    <div className="w-screen h-screen flex justify-center items-center bg-blue-400 overflow-auto">
       <div className="card bg-white rounded-md w-96 ">
         <h1 className="text-blue-400 border-b border-black/20 p-4 font-semibold text-xl flex gap-4 items-center">
           <Link to="/">
@@ -49,14 +49,14 @@ const WeatherInfo = () => {
           <span>Weather App</span>
         </h1>
         <div className="details-wrapper flex flex-col items-center">
-          <img src={imgSrc} alt="weather-icon" className="w-40 my-4 " />
+          <img src={imgSrc} alt="weather-icon" className="w-32 my-4 " />
           <span className="temp font-bold text-6xl tracking-wider">
             {Math.floor(weatherData?.main?.temp)}&deg;C
           </span>
-          <span className="details mt-4  text-xl font-medium tracking-wide">
+          <span className="details mt-4  text-xl  tracking-wide">
             {weatherData?.weather?.[0]?.description}
           </span>
-          <span className="location flex  items-center mt-4 gap-2 text-xl font-medium tracking-wide">
+          <span className="location flex  items-center mt-4 gap-2 text-xl tracking-wide">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-5 h-5"
